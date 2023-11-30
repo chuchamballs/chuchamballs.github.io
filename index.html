@@ -66,62 +66,28 @@
 <div id="container">
     <h1>Morse Code Converter</h1>
     <input type="text" id="textInput" placeholder="Zadejte text v morseově abecedě">
-    <button onclick="convertToLetter()">Převést</button>
     <button onclick="addDot()">Přidat tečku</button>
     <button onclick="addDash()">Přidat čárku</button>
     <button onclick="removeLast()">Odebrat poslední znak</button>
 
     <div id="morseAlphabet">
-        <p>A .-</p>
-        <p>B -...</p>
-        <p>C -.-.</p>
-        <p>D -..</p>
-        <p>E .</p>
-        <p>F ..-.</p>
-        <p>G --.</p>
-        <p>H ....</p>
-        <p>I ..</p>
-        <p>J .---</p>
-        <p>K -.-</p>
-        <p>L .-..</p>
-        <p>M --</p>
-        <p>N -.</p>
-        <p>O ---</p>
-        <p>P .--.</p>
-        <p>Q --.-</p>
-        <p>R .-.</p>
-        <p>S ...</p>
-        <p>T -</p>
-        <p>U ..-</p>
-        <p>V ...-</p>
-        <p>W .--</p>
-        <p>X -..-</p>
-        <p>Y -.--</p>
-        <p>Z --..</p>
-        <p>0 -----</p>
-        <p>1 .----</p>
-        <p>2 ..---</p>
-        <p>3 ...--</p>
-        <p>4 ....-</p>
-        <p>5 ..... </p>
-        <p>6 -....</p>
-        <p>7 --...</p>
-        <p>8 ---..</p>
-        <p>9 ----.</p>
+        <p>A .-       N -.       0 -----</p>
+        <p>B -...     O ---      1 .----</p>
+        <p>C -.-.     P .--.     2 ..---</p>
+        <p>D -..      Q --.-     3 ...--</p>
+        <p>E .        R .-.      4 ....-</p>
+        <p>F ..-.     S ...      5 ..... </p>
+        <p>G --.      T -        6 -....</p>
+        <p>H ....     U ..-      7 --...</p>
+        <p>I ..       V ...-     8 ---..</p>
+        <p>J .---     W .--      9 ----.</p>
+        <p>K -.-      X -..-</p>
+        <p>L .-..     Y -.--</p>
+        <p>M --       Z --..</p>
     </div>
 </div>
 
 <script>
-    function convertToLetter() {
-        var inputText = document.getElementById('textInput').value.trim().toUpperCase();
-
-        // Převod celého zadaného vstupu na písmeno
-        var convertedLetter = convertMorseToLetter(inputText);
-
-        // Zobrazení alertu s převedeným písmenem
-        alert('Převedené písmeno: ' + convertedLetter);
-    }
-
     function addDot() {
         document.getElementById('textInput').value += '.';
     }
@@ -133,13 +99,6 @@
     function removeLast() {
         var currentText = document.getElementById('textInput').value;
         document.getElementById('textInput').value = currentText.slice(0, -1);
-    }
-
-    function convertMorseToLetter(morse) {
-        // Implementace převodu morseovy abecedy na písmeno
-        // Tato část kódu by měla být doplněna podle potřeby
-        // Zde by měla být implementace dešifrování morseovy abecedy
-        return 'PES'; // Příklad - nahraďte skutečným kódem
     }
 </script>
 
