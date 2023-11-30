@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morse Code Converter</title>
+    <title>Vánoční Morse Code Converter</title>
     <style>
         body {
             margin: 0;
@@ -13,12 +13,12 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(to right, #00FFFF, #800080); /* tyrkysová až purpurová */
-            animation: bubbles 10s infinite;
+            animation: snowfall 10s linear infinite;
         }
 
-        @keyframes bubbles {
+        @keyframes snowfall {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-50px); }
+            50% { transform: translateY(50px); }
             100% { transform: translateY(0); }
         }
 
@@ -65,7 +65,7 @@
 <body>
 
 <div id="container">
-    <h1>Morse Code Converter</h1>
+    <h1>Vánoční Morse Code Converter</h1>
     <input type="text" id="textInput" placeholder="Zadejte text v morseově abecedě">
     <div>
         <button onclick="addDot()">Přidat tečku</button>
