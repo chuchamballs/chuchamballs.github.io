@@ -71,6 +71,7 @@
         <button onclick="addDot()">Přidat tečku</button>
         <button onclick="addDash()">Přidat čárku</button>
         <button onclick="removeLast()">Odebrat poslední znak</button>
+        <button onclick="translateFromMorse()">Přeložit z morseovky</button>
     </div>
     <div id="morseAlphabet">
         <p>A .-       N -.       0 -----</p>
@@ -101,6 +102,19 @@
     function removeLast() {
         var currentText = document.getElementById('textInput').value;
         document.getElementById('textInput').value = currentText.slice(0, -1);
+    }
+
+    function translateFromMorse() {
+        var morseText = document.getElementById('textInput').value.trim();
+        var translatedText = convertMorseToLetter(morseText);
+        alert('Přeložený text: ' + translatedText);
+    }
+
+    function convertMorseToLetter(morse) {
+        // Implementace převodu morseovy abecedy na písmeno
+        // Tato část kódu by měla být doplněna podle potřeby
+        // Zde by měla být implementace dešifrování morseovy abecedy
+        return 'PES'; // Příklad - nahraďte skutečným kódem
     }
 </script>
 
