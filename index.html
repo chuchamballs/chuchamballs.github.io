@@ -110,12 +110,41 @@
         alert('Přeložený text: ' + translatedText);
     }
 
-    function convertMorseToLetter(morse) {
-        // Implementace převodu morseovy abecedy na písmeno
-        // Tato část kódu by měla být doplněna podle potřeby
-        // Zde by měla být implementace dešifrování morseovy abecedy
-        return 'PES'; // Příklad - nahraďte skutečným kódem
+    function convertMorse() {
+    const morseInput = document.getElementById('morseInput').value.trim();
+    const morseRegex = /^[.-\s]+$/; // Regex pro kontrolu Morseovy abecedy
+    if (morseRegex.test(morseInput)) {
+      const morseMap = {
+        ".-": "A", "-...": "B", "-.-.": "C", "-..": "D", ".": "E",
+        "..-.": "F", "--.": "G", "....": "H", "..": "I", ".---": "J",
+        "-.-": "K", ".-..": "L", "--": "M", "-.": "N", "---": "O",
+        ".--.": "P", "--.-": "Q", ".-.": "R", "...": "S", "-": "T",
+        "..-": "U", "...-": "V", ".--": "W", "-..-": "X", "-.--": "Y",
+        "--..": "Z", ".----": "1", "..---": "2", "...--": "3", "....-": "4",
+        ".....": "5", "-....": "6", "--...": "7", "---..": "8", "----.": "9",
+        "-----": "0", ".-.-.-": ".", "--..--": ",", "..--..": "?", "-..-.": "/",
+        "-....-": "-", "-.--.": "(", "-.--.-": ")", ".----.": "'", "-.-.--": "!",
+        "-...-": "="
+        // Doplnění ostatních znaků Morseovy abecedy
+      };
+
+      const morseCodes = morseInput.split(" ");
+      let result = '';
+      for (let code of morseCodes) {
+        if (morseMap[code]) {
+          result += morseMap[code];
+        }
+      }
+
+      if (result !== '') {
+        alert("Přeloženo: " + result);
+      } else {
+        alert("Zadávejte platné znaky Morseovy abecedy: .-");
+      }
+    } else {
+      alert("Zadávejte platné znaky Morseovy abecedy: .-");
     }
+  }
 </script>
 
 </body>
